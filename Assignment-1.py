@@ -3,6 +3,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -99,23 +100,23 @@ if __name__ == "__main__":
     print("1. Create linked list")
     ll.create([10, 20, 30, 40, 50])
 
-    print("2. Traverse:")
+    print("\n2. Traverse:")
     ll.traverse()
 
-    print("3. Insert 25 at position 3:")
+    print("\n3. Insert 25 at position 3:")
     ll.insert_at(3, 25)
     ll.traverse()
 
-    print("4. Middle node:")
+    print("\n4. Middle node:")
     ll.find_middle()
 
-    print("5. Delete node 40:")
+    print("\n5. Delete node 40:")
     ll.delete(40)
     ll.traverse()
 
-    print("6. Reverse list:")
+    print("\n6. Reverse list:")
     ll.reverse()
     ll.traverse()
 
-    print("7. Sum of every two consecutive nodes:")
+    print("\n7. Sum of every two consecutive nodes:")
     ll.consecutive_sums()
