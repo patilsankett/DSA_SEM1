@@ -13,6 +13,39 @@ class Linked_list:
     def __init__(self):
         self.base = None
 
+    def reverse(self): #Reversing a linked list
+            curr=self.head
+            prev=None
+            while(curr):
+                nextnode=curr.next
+                curr.next=prev
+                prev=curr
+                curr=nextnode
+            self.head=prev
+
+    def findmid_del(self):
+        temp = temp1-self.head
+        prev = None
+        while temp1 and temp1.next:
+            temp = temp.next
+            temp1=temp1.next
+        print("Middle Node:",temp.data)
+        prev.next = temp.next
+        temp = None
+
+    def del_firstlast(self): #delete First and last Node
+        temp = self.head
+        self.head = temp.next
+
+        temp = self.head
+        prev = temp
+        while temp.next != None:
+            prev = temp
+            temp = temp.next
+        prev.next=None
+        temp = None
+
+
     def push(self, new_node : Node):
         if self.base== None:
             self.base = new_node
